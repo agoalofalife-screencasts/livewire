@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Contracts\Repositories\QuestionsRepository;
+use App\Repositories\Quiz\RedisQuestionsRepository;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +25,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+       $this->app->bind(QuestionsRepository::class, fn ($app) => new RedisQuestionsRepository());
     }
 }
