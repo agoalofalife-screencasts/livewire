@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Contracts\Repositories\QuestionsRepository;
+use App\DTO\Quiz\QuestionDto;
 use Illuminate\Database\Seeder;
 
 class QuestionsSeeder extends Seeder
@@ -33,12 +34,14 @@ class QuestionsSeeder extends Seeder
     /**
      * Run the database seeds.
      *
+     * @param QuestionsRepository $questionsRepository
      * @return void
+     * @throws \Spatie\DataTransferObject\Exceptions\UnknownProperties
      */
     public function run(QuestionsRepository $questionsRepository)
     {
         foreach ($this->questions as $question) {
-            $questionsRepository->addQuestion($question);
+            $questionsRepository->addQuestion(new QuestionDto($question));
         }
     }
 }
