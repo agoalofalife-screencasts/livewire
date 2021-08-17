@@ -8,7 +8,7 @@ use Livewire\Component;
 class Question extends Component
 {
     public string $question;
-    public array $options;
+    public array $options = [];
     public $answer;
     public $keyCurrentQuestion;
     public $questions;
@@ -17,6 +17,16 @@ class Question extends Component
     public function mount(QuestionsRepository $questionsRepository)
     {
         $this->questions = $questionsRepository->all();
+
+    }
+
+    public function getQuestions(QuestionsRepository $questionsRepository)
+    {
+        $this->questions = $questionsRepository->all();
+    }
+
+    public function loadQuestion()
+    {
         $this->toggleQuestion();
     }
 

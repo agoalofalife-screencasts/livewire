@@ -28,6 +28,26 @@ class QuestionsSeeder extends Seeder
                 '149 345 500'
             ],
             'right_answer' => 0
+        ],
+        [
+            'question' => 'самая длинная река в России?',
+            'options' => [
+                'Лена',
+                'Ока',
+                'Урал',
+                'Ишим',
+            ],
+            'right_answer' => 0
+        ],
+        [
+            'question' => 'самая длинная река в России?',
+            'options' => [
+                'Лена',
+                'Ока',
+                'Урал',
+                'Ишим',
+            ],
+            'right_answer' => 0
         ]
     ];
 

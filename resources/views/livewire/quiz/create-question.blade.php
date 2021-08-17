@@ -7,7 +7,9 @@
     <form wire:submit.prevent="saveQuestion">
         <div class="mb-3">
             <label for="question" class="form-label">Вопрос</label>
-            <input type="text" class="form-control @error('question') is-invalid @enderror" wire:model="question" name="question" id="question">
+            <input type="text" class="form-control @error('question') is-invalid @enderror" wire:model.lazy="question"
+                   wire:dirty.class="border border-info border-2"
+                   name="question" id="question">
             @error('question')
              <div class="invalid-feedback">
                 {{$message}}
