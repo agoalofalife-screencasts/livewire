@@ -53,6 +53,8 @@ class Question extends Component
         }
         if (is_null($currentQuestion)) {
             $this->result = $this->calculateRightAnswers($this->questions);
+            $this->dispatchBrowserEvent('toast', ['title' => 'Уведомление', 'message' => 'Тест пройден']);
+//            $this->emit('toast', 'Уведомление', 'Тест пройден');
         }
     }
 
