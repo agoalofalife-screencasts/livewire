@@ -22,3 +22,4 @@
 | Валидацая            | https://youtu.be/3U0MhnorVcU |
 | Тонкости UI          | https://youtu.be/penO1oqr9PM |
 | События              | https://youtu.be/tfdKVS-hOGE |
+| Тестирование         | https://youtu.be/OLfWxL10Rr8 |
